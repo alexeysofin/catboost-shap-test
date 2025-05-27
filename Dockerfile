@@ -38,4 +38,4 @@ RUN cp ./build/main ./main
 
 RUN python3 train.py
 
-CMD [ "main" ]
+CMD [ "./main" ]
