@@ -16,7 +16,6 @@ WORKDIR /app
 
 COPY 0001-test-shap.patch ./
 
-# COPY ./catboost ./catboost
 RUN git clone --depth 1 --branch v1.2.7 https://github.com/catboost/catboost.git
 
 WORKDIR /app/catboost
