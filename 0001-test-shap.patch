@@ -1,6 +1,6 @@
-From eeb0025c3b043cc864133f022a60a0db6637d85b Mon Sep 17 00:00:00 2001
+From 40c6a98764f7ab287899bebca752d5e9e82e25fe Mon Sep 17 00:00:00 2001
 From: Aliaksei Sofin <aliaksei.sofin@intuitionmachines.com>
-Date: Tue, 27 May 2025 12:21:13 +0200
+Date: Tue, 27 May 2025 13:20:39 +0200
 Subject: [PATCH 1/1] test shap
 
 ---
@@ -10,7 +10,7 @@ Subject: [PATCH 1/1] test shap
  3 files changed, 20 insertions(+)
 
 diff --git a/catboost/libs/model_interface/c_api.cpp b/catboost/libs/model_interface/c_api.cpp
-index 74c7387b16..8981f07b2e 100644
+index 74c7387b16..726dfaa424 100644
 --- a/catboost/libs/model_interface/c_api.cpp
 +++ b/catboost/libs/model_interface/c_api.cpp
 @@ -1033,5 +1033,23 @@ CATBOOST_API bool GetEmbeddingFeatureIndices(ModelCalcerHandle* modelHandle, siz
@@ -20,7 +20,7 @@ index 74c7387b16..8981f07b2e 100644
 +CATBOOST_API bool GetShapValues(ModelCalcerHandle *modelHandle) {
 +  auto model = *FULL_MODEL_PTR(modelHandle);
 +
-+  auto data_wrapper = DataWrapperCreate(1);
++  auto data_wrapper = DataWrapperCreate(2);
 +
 +  std::vector<std::vector<float>> vec = {{1.0f, 2.0f}, {3.0f, 4.0f}};
 +  std::vector<const float *> rawPtrs;
